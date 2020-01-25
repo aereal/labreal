@@ -74,6 +74,14 @@
     "lint": "eslint --ext .ts --ext .tsx src/"
   },
   "eslintConfig": {
+    "overrides": [
+      {
+        "files": ["*.d.ts"],
+        "rules": {
+          "@typescript-eslint/triple-slash-reference": "off"
+        }
+      }
+    ],
     "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/eslint-recommended",
